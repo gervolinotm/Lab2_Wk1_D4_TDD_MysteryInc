@@ -28,3 +28,9 @@ def total_monies(people)
   end
   return total_allowance
 end
+
+
+def friendly_loan_transaction(lender, lendee, money)
+  lender[:monies] -= money
+  lendee[:monies] += money
+end

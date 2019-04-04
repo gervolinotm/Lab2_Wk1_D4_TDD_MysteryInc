@@ -120,7 +120,11 @@ end
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
-
+  def test_friendly_loan_shark
+    friendly_loan_transaction(@person4, @person1, 1)
+    assert_equal(19, @person4[:monies])
+    assert_equal(2, @person1[:monies])
+  end
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
