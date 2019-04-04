@@ -86,11 +86,20 @@ def test_food_preference
   assert_equal(true, result_food)
 end
 
+def test_food_dispreference
+  result_food = likes_to_eat(@person4, "dust")
+  assert_equal(false, result_food)
+end
 
 
   # 4. For a given person, add a new name to their list of friends
   # (e.g. the function add_friend(@person2, "Scrappy-Doo") should add Scrappy-Doo to the friends.)
   # (hint: This function should not return anything. After the function call, check for the length of the friends array to test it!)
+def test_how_many_friends
+  add_friend(@person3, "Scrappy-Doo")
+  assert_equal(3, @person3[:friends].length)
+end
+
 
 
   # 5. For a given person, remove a specific name from their list of friends
